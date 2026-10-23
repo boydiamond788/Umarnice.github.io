@@ -1,0 +1,82 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #1d2733;
+  background: #fff;
+}
+
+a { color: #0b6e4f; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.9rem 1.25rem;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; text-decoration: none; color: #0b6e4f; }
+.links a { margin-left: 1rem; text-decoration: none; color: #1d2733; font-weight: 600; }
+.links a:hover { color: #0b6e4f; }
+
+.hero {
+  text-align: center;
+  padding: 5rem 1.25rem;
+  color: #fff;
+  background: linear-gradient(135deg, #0b6e4f, #08415c);
+}
+.hero h1 { font-size: 2.2rem; max-width: 700px; margin: 0 auto 1rem; }
+.hero p { max-width: 560px; margin: 0 auto 2rem; opacity: 0.92; }
+
+.buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn.primary { background: #25d366; border-color: #25d366; color: #073b1c; }
+.btn:hover { opacity: 0.9; }
+
+.section { max-width: 960px; margin: 0 auto; padding: 3.5rem 1.25rem; }
+.section.alt { max-width: none; background: #f2f6f5; }
+.section.alt > * { max-width: 960px; margin-left: auto; margin-right: auto; }
+.section h2 { margin-bottom: 1.25rem; color: #0b6e4f; font-size: 1.8rem; }
+.section.alt .btn { margin-top: 1rem; display: block; width: fit-content; margin-left: auto; margin-right: auto; margin-left: max(1.25rem, calc((100% - 960px) / 2)); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e1e8e6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.card h3 { margin-bottom: 0.5rem; }
+.card.featured { border: 2px solid #0b6e4f; }
+.price { font-size: 1.6rem; font-weight: bold; color: #0b6e4f; margin-bottom: 0.5rem; }
+
+.points { list-style: none; margin-top: 1rem; }
+.points li { margin-bottom: 0.4rem; }
+
+#contact p { margin-bottom: 0.4rem; }
+
+footer { text-align: center; padding: 1.5rem 1rem; background: #08415c; color: #fff; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.7rem; }
+  .links a { margin: 0 0.6rem 0 0; }
+}
